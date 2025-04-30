@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Aggiungere Font Awesome per le icone -->
+    <link rel="icon" href="../../public/assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="./login.style.css">
+</head>
+<body>
+    <!-- Contenitore per l'immagine con sfocatura -->
+    <div class="background-container">
+        <img src="../../../public/assets/fotoisola2.jpg" alt="Immagine di sfondo">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../../public/assets/logo.png" alt="Logo" class="logo-image">
+            <span class="logo-text">IvanTrip</span>
+        </div>
+        <div class="buttons">
+            <button class="nav-button" onclick="window.location.href='../html/register/register.html'">Registrati</button>
+        </div>
+    </nav>
+
+    <!-- Form di Login -->
+    <main>
+        <div class="login-container">
+            <h2 class="login-title">Login</h2>
+            <form action="/login" method="POST" class="login-form">
+                <!-- Campo Email -->
+                <div class="input-group">
+                    <input type="email" id="email" name="email" class="input-field" required>
+                    <label for="email" class="floating-label">Email</label>
+                </div>
+                <!-- Campo Password -->
+                <div class="input-group">
+                    <input type="password" id="password" name="password" class="input-field" required>
+                    <label for="password" class="floating-label">Password</label>
+                </div>
+                <button type="submit" class="login-button">Accedi</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

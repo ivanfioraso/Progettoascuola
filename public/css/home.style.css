@@ -1,0 +1,316 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../../public/assets/fotoisola2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: #fff;
+    
+    
+}
+
+/* Barra del titolo */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#52b88f;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .buttons button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar .buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Sezione Carousel */
+/* Sezione Carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 25rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color:#52b88f;  /* Rosso (Crimson) */
+}
+
+/* Container del carousel */
+.carousel {
+    width: 100%; /* La larghezza deve essere del 100% */
+    height: 100%;
+    display: flex;
+    position: relative; /* Necessario per posizionare correttamente il separatore */
+    animation: slide 12s linear infinite;
+    gap: 1rem;
+}
+
+/* Immagini del carousel */
+.carousel-item {
+    flex: 0 0 100%; /* Ogni immagine occupa il 100% della larghezza */
+    height: 100%; /* Ogni immagine occupa tutta l'altezza del container */
+    padding: 0; /* Rimuovi eventuali padding */
+    box-sizing: border-box; /* Gestisce il box model */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Rende l'immagine adattata ma coprente */
+    border-radius: 1rem;
+}
+
+/* Animazione dello sliding */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
+}
+
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Sezione Intro */
+.intro {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background-color:#52b88f;
+    margin-top: 50px;
+    border-radius: 1rem;
+}
+
+.intro h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: white;
+    z-index: 2;
+}
+
+.intro p {
+    font-size: 18px;
+    color: white;
+    z-index: 2;
+}
+
+.intro button {
+    padding: 12px 20px;
+    background-color: #f8a91f;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.intro button:hover {
+    background-color: #e87e10;
+}
+
+/* Sezione Chi Siamo */
+.about {
+    background-color:#52b88f;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Sezione Offerte Speciali */
+.special-offers {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px 20px;
+    background-color: rgba(51, 51, 51, 0.7);
+    color: white;
+}
+
+.card-container-up{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card-container-down{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-inline: 5rem;
+}
+
+.offer-card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    width: 100%;
+    padding-block: 0.5rem;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.offer-card-button{
+    position: absolute;
+    top: 95%;
+    left: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card-button:hover{
+    top: 94%;
+}
+
+.offer-card img {
+    width: 95%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.offer-card h3 {
+    margin: 15px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.offer-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.offer-card button {
+    padding: 10px 20px;
+    background-color: #f8a91f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: help;
+}
+
+.offer-card button:hover {
+    background-color: #e87e10;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sezione Pacchetto Viaggi */
+.travel-package {
+
+    background-color: #36cba0;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 20px;
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.travel-package h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.travel-package p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.travel-package button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.travel-package button:hover {
+    background-color: #0056b3;
+}
+
+/* Sezione Footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    margin-top: auto;
+}
+
+.footer p {
+    font-size: 14px;
+}

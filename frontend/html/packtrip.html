@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offerte Speciali per i Viaggi - IvanTrip</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="icon" href="../../public/assets/logo.png" type="image/png">
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .buttons button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar .buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Stile per il carosello */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 400px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Introduzione */
+.intro {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.intro h1 {
+    font-size: 40px;
+    color: #333;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.intro button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.intro button:hover {
+    background-color: #65d06a;
+}
+
+/* Offerte Speciali */
+.special-offers {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.card-container-up,
+.card-container-middle,
+.card-container-down {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.offer-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+}
+
+.offer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.offer-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.offer-card p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.offer-card-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.offer-card-button:hover {
+    background-color: #65d06a;
+}
+
+/* Responsive per schermi più piccoli */
+@media (max-width: 768px) {
+    .card-container-up,
+    .card-container-middle,
+    .card-container-down {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offer-card {
+        width: 80%;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .intro button {
+        padding: 12px 25px;
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    margin-top: 40px;
+}
+</style>
+<body>
+
+    <!-- Barra del titolo con icona, nome e bottoni -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="../../public/assets/logo.png" alt="Logo" style="width: 48px; height: 48px; margin-right: 10px;">
+            <span>IvanTrip</span>
+        </div>
+        <div class="buttons">
+            <button onclick="window.location.href='../html/login.html'">Accedi</button>
+            <button onclick="window.location.href='../html/register.html'">Registrati</button>
+        </div>
+    </div>
+
+    <!-- Sezione Introduzione -->
+    <div class="intro">
+        <h1>Offerte Speciali per i Viaggi</h1>
+        <p>Scopri le nostre offerte esclusive per viaggi con volo e alloggio inclusi!</p>
+    </div>
+
+    <!-- Sezione Offerte Speciali -->
+    <div class="special-offers">
+
+        <!-- 2 viaggi con poche possibili destinazioni -->
+        <div class="card-container-up">
+            <div class="offer-card">
+                <img src="../../public/assets/tropic.jpeg" alt="Offerta 1">
+                <h3>Weekend Romantico in Italia</h3>
+                <p>Un weekend romantico in una delle città più belle d'Italia. Volo e alloggio inclusi!</p>
+                <br><br>
+                <button class="offer-card-button" onclick="window.location.href='/Fioraso/offerta1.html'">Vedi Offerta</button>
+            </div>
+            <div class="offer-card">
+                <img src="../../public/assets/romantica.jpeg" alt="Offerta 2">
+                <h3>Scopri le Spiagge Greche</h3>
+                <p>Rilassati sulle magnifiche spiagge della Grecia. Volo e alloggio inclusi.</p>
+                <br><br>
+                <button class="offer-card-button" onclick="window.location.href='/Fioraso/offerta2.html'">Vedi Offerta</button>
+            </div>
+        </div>
+
+        <!-- 3 viaggi con maggiori destinazioni -->
+        <div class="card-container-middle">
+            <div class="offer-card">
+                <img src="../../public/assets/montagna.jpeg" alt="Offerta 3">
+                <h3>Avventura nelle Montagne</h3>
+                <p>Un viaggio avventuroso nelle montagne più belle d'Europa. 5 destinazioni disponibili, volo e alloggio inclusi.</p>
+                <br><br>
+                <button class="offer-card-button" onclick="window.location.href='/Fioraso/offerta3.html'">Vedi Offerta</button>
+            </div>
+            <div class="offer-card">
+                <img src="../../public/assets/safari.jpg" alt="Offerta 4">
+                <h3>Safari Africano</h3>
+                <p>Un safari emozionante in Africa, con 5 destinazioni possibili. Volo e alloggio inclusi.</p>
+                <br><br>
+                <button class="offer-card-button" onclick="window.location.href='/Fioraso/offerta4.html'">Vedi Offerta</button>
+            </div>
+            <div class="offer-card">
+                <img src="../../public/assets/cas.jpeg" alt="Offerta 5">
+                <h3>Vacanza Esotica ai Caraibi</h3>
+                <p>Una settimana di relax nei Caraibi, scegli tra 7 isole paradisiache. Volo e alloggio inclusi.</p>
+                <br><br>
+                <button class="offer-card-button" onclick="window.location.href='/Fioraso/offerta5.html'">Vedi Offerta</button>
+            </div>
+        </div>
+
+        <!-- Offerta con 5 viaggi e tutte le destinazioni possibili -->
+        <div class="card-container-down">
+            <div class="offer-card">
+                <img src="../../public/assets/tropic.jpeg" alt="Offerta 6">
+                <h3>Viaggio Esclusivo: 5 Destinazioni</h3>
+                <p>Scopri 5 incredibili destinazioni di viaggio con volo e alloggio inclusi. Prenota ora e ricevi uno sconto esclusivo!</p>
+                <button onclick="window.location.href='/Fioraso/offerta6.html'">Vedi Offerta</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sezione Footer -->
+    <div class="footer">
+        <p>&copy; 2025 IvanFarm. Tutti i diritti riservati.</p>
+    </div>
+
+</body>
+</html>

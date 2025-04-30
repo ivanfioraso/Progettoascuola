@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../public/assets/logo.png" type="image/png">
+    <title>Registrazione</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Contenitore per l'immagine di sfondo con sfocatura */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: #333;
+            background-image: url('../../public/assets/fotoisola2.jpg'); /* Percorso dell'immagine */
+            background-size: cover; /* Fa sì che l'immagine copra tutta la pagina */
+            background-position: center; /* Centra l'immagine */
+            background-attachment: fixed; /* Fissa l'immagine durante lo scroll */
+            
+        }
+
+        .background-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+           /* Aggiunge sfocatura all'immagine */
+        }
+
+        /* Barra del titolo */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .navbar .logo span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .navbar .buttons button {
+            background-color: white;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .navbar .buttons button:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Contenitore del modulo di registrazione */
+        .register-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .register-container h2 {
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+         /* Stile per i bottoni nella navbar */
+         .navbar .buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .buttons button:hover {
+            background-color: #65d06a;
+        }
+
+        /* Stile per il bottone di login */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #65d06a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenitore per l'immagine di sfondo con sfocatura -->
+    <!--<div class="background-container">
+        <img src="../../public/assets/fotoisola2.jpg" alt="Immagine di sfondo">
+    </div>-->
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="../../public/assets/logo.png"  alt="Logo" style="width: 48px; height: 48px; margin-right: 10px;">
+            <span>IvanTrip</span>
+        </div>
+        <div class="buttons">
+            <button onclick="window.location.href='../html/login.html'">Accedi</button>
+            <button onclick="window.location.href='../html/register.html'">Registrati</button>
+        </div>
+    </div>
+
+    <!-- Modulo di Registrazione -->
+    <div class="register-container">
+        <h2>Registrazione</h2>
+        <form id="registrationForm" action="/register" method="POST">
+            <br>
+            <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required><br>
+
+            <br>
+            <input type="text" id="surname" name="surname" placeholder="Inserisci il tuo cognome" required><br>
+
+            <br>
+            <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required><br>
+
+            <br>
+            <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Conferma la tua email" required><br>
+
+            <br>
+            <input type="password" id="password" name="password" placeholder="Inserisci la tua password" required><br>
+
+            <br>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Conferma la tua password" required><br>
+            <br>
+            <button type="submit">Registrati</button>
+            
+        </form>
+        
+    </div>
+    <div>
+        <br><br> <br>
+    </div>
+    <script>
+        document.getElementById('registrationForm').onsubmit = function(event) {
+            // Prevenire il submit se ci sono errori
+            event.preventDefault();
+
+            // Recupero i valori dei campi
+            var email = document.getElementById('email').value;
+            var confirmEmail = document.getElementById('confirmEmail').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Controllo che email e conferma email siano uguali
+            if (email !== confirmEmail) {
+                alert("Le email non corrispondono.");
+                return;
+            }
+
+            // Controllo che password e conferma password siano uguali
+            if (password !== confirmPassword) {
+                alert("Le password non corrispondono.");
+                return;
+            }
+
+            // Funzione per validare la password
+            function validatePassword(password) {
+                // Controlla che la password abbia almeno 8 caratteri
+                if (password.length < 8) {
+                    return "La password deve avere almeno 8 caratteri.";
+                }
+
+                // Controlla che la password abbia almeno un numero e un carattere speciale
+                var regex = /(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?/~\\|-])/;
+                if (!regex.test(password)) {
+                    return "La password deve contenere almeno un numero e un carattere speciale.";
+                }
+
+                // Controlla che la password non contenga sequenze di numeri
+                if (/(012|123|234|345|456|567|678|789|890)/.test(password)) {
+                    return "La password non può contenere più di 2 numeri in sequenza.";
+                }
+
+                return null;
+            }
+
+            // Validazione della password
+            var passwordError = validatePassword(password);
+            if (passwordError) {
+                alert(passwordError);
+                return;
+            }
+
+            // Se tutto è valido, possiamo inviare il form
+            alert("Registrazione completata con successo!");
+            // Form submission (qui potresti voler fare una chiamata AJAX o inviare il form come al solito)
+            this.submit();
+        }
+    </script>
+
+</body>
+</html>

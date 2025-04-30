@@ -1,0 +1,228 @@
+/* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: #ffffff; /* Testo bianco per contrastare lo sfondo futuristico */
+    overflow: hidden;
+    background-color: #000; /* Fallback in caso l'immagine di sfondo non carichi */
+}
+
+/* Contenitore per l'immagine di sfondo */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: scale(1.1); /* Leggero zoom per coprire tutto */
+}
+
+.background-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navbar futuristica */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0, 255, 128, 0.8), rgba(0, 191, 255, 0.8)); /* Gradiente verde-azzurro */
+    color: white;
+    padding: 15px 30px; /* Maggiore padding per un aspetto più elegante */
+    box-shadow: 0 4px 20px rgba(0, 255, 128, 0.5); /* Ombra neon più pronunciata */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    border-radius: 50%; /* Effetto circolare per il logo */
+    box-shadow: 0 0 15px rgba(0, 255, 128, 0.8); /* Bagliore neon */
+}
+
+.logo-text {
+    font-size: 28px; /* Aumentato per una maggiore visibilità */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 128, 0.8); /* Testo con bagliore neon */
+}
+
+.buttons {
+    display: flex;
+    gap: 15px; /* Maggiore spazio tra i pulsanti */
+}
+
+.nav-button {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(0, 255, 128, 0.8);
+    padding: 12px 25px; /* Maggiore padding per un aspetto più professionale */
+    border-radius: 25px; /* Bottoni più arrotondati */
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 255, 128, 0.8);
+}
+
+.nav-button:hover {
+    background: rgba(0, 255, 128, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 128, 0.8); /* Bagliore al passaggio del mouse */
+}
+
+/* Form di Login futuristico */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: rgba(30, 30, 30, 0.9); /* Sfondo scuro semi-trasparente */
+    padding: 50px; /* Maggiore padding per un aspetto più spazioso */
+    border-radius: 20px;
+    width: 400px; /* Larghezza aumentata per un layout più equilibrato */
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 255, 128, 0.8); /* Bagliore neon intorno al form */
+}
+
+.login-title {
+    font-size: 32px; /* Aumentato per una maggiore visibilità */
+    margin-bottom: 25px;
+    color: #00ff80; /* Verde neon */
+    text-shadow: 0 0 15px rgba(0, 255, 128, 0.8); /* Testo con bagliore neon */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px; /* Maggiore spazio tra i campi */
+    text-align:
+
+.input-field {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 255, 128, 0.8); /* Bordo più luminoso */
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1); /* Campo input semi-trasparente */
+    color: white;
+    border: 1px solid rgba(0, 255, 128, 0.5); /* Bordo sottile neon */
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    background: rgba(255, 255, 255, 0.2); /* Cambia colore quando focusato */
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.8); /* Bagliore neon */
+}
+
+.floating-label {
+    position: absolute;
+    top: 33%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7); /* Label semi-trasparente */
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus + .floating-label {
+    top: 10%;
+    left: 10px;
+    font-size: 12px;
+    color: #00ff80; /* Verde neon */
+    text-shadow: 0 0 5px rgba(0, 255, 128, 0.8); /* Bagliore neon */
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, rgba(0, 255, 128, 0.8), rgba(0, 191, 255, 0.8)); /* Gradiente verde-azzurro */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.8); /* Bagliore neon */
+}
+
+.login-button:hover {
+    background: linear-gradient(90deg, rgba(0, 255, 128, 1), rgba(0, 191, 255, 1)); /* Gradiente più intenso */
+    box-shadow: 0 0 20px rgba(0, 255, 128, 1); /* Bagliore più pronunciato */
+}
+
+/* Stile generale del banner dei cookie */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e8f5e9; /* Verde chiaro per lo sfondo */
+    color: #2e7d32; /* Verde scuro per il testo */
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cookie-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .cookie-content p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .cookie-link {
+    color: #0288d1; /* Azzurro acceso per i link */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .cookie-link:hover {
+    text-decoration: underline;
+  }
+  
+  .cookie-button {
+    background-color: #0288d1; /* Azzurro acceso per il pulsante */
+    color: #ffffff; /* Testo bianco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cookie-button:hover {
+    background-color: #01579b; /* Azzurro più scuro al passaggio del mouse */
+  }
